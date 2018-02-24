@@ -1,4 +1,5 @@
 kind: PersistentVolumeClaim
+apiVersion: v1
 metadata:
   name: redis-data-redis-app-4
   labels:
