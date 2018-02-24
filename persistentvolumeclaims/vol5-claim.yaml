@@ -11,8 +11,3 @@ spec:
   resources:
     requests:
       storage: 200M
-  selector:
-    matchLabels:
-      path: nfsshare5
-      app: redis
-      podindex: "4"
