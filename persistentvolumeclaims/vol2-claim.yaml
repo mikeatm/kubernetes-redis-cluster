@@ -1,16 +1,15 @@
 kind: PersistentVolumeClaim
-apiVersion: v1
 metadata:
   name: redis-data-redis-app-1
   labels:
-    type: redis-nfs-claim
     app: redis
 spec:
+  storageClassName: rook-block
   accessModes:
-    - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 200Mb
   selector:
     matchLabels:
       path: nfsshare2
