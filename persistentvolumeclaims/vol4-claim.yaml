@@ -1,6 +1,6 @@
 kind: PersistentVolumeClaim
 metadata:
-  name: redis-data-redis-app-4
+  name: redis-data-redis-app-3
   labels:
     app: redis
 spec:
@@ -12,6 +12,6 @@ spec:
       storage: 200Mb
   selector:
     matchLabels:
-      path: nfsshare5
+      path: nfsshare4
       app: redis
-      podindex: "4"
+      podindex: "3"
