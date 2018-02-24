@@ -10,7 +10,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 200Mb
+      storage: 200M
   selector:
     matchLabels:
       path: nfsshare6
