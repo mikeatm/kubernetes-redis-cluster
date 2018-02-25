@@ -1,0 +1,33 @@
+# Allow the default serviceAccount to use the priviliged PSP
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rook
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rook-default-psp
+  namespace: rook
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: privileged-psp-user
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: rook
+---
+# Allow the rook-ceph-osd serviceAccount to use the privileged PSP
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rook-ceph-osd-psp
+  namespace: rook
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: privileged-psp-user
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-osd
+  namespace: rook
