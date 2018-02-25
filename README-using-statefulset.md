@@ -1,13 +1,9 @@
 # Kubernetes Redis Cluster
 
-### Create NFS storages
+### Create Rook Hyperconverged Storage
 
+see inside rook folder.
 
-### Create Persistent Volumes
-
-```
-kubectl create -f persistentvolume
-```
 
 ### Create Persistent Volumes Claims
 
@@ -72,7 +68,7 @@ redis-trib.py replicate \
 
 Connect to any redis pod
 ```
-kubectl exec -it <podName> -- /bin/bash
+kubectl exec -it ubuntu -- /bin/bash
 ```
 Access cli
 ```
