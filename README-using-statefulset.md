@@ -73,13 +73,12 @@ kubectl exec -it ubuntu -- /bin/bash
 Access cli
 
 ```
-  /usr/local/bin/redis-cli -c -p 6379 -h `dig +short redis-app-2.redis-service.default.svc.cluster.local`
+  redis-cli -c -p 6379 -h `dig +short redis-app-2.redis-service.default.svc.cluster.local`
 ```
 To check cluster nodes
 
 ```
-/usr/local/bin/redis-cli -p 6379 cluster nodes
-  /usr/local/bin/redis-cli -p 6379 -h `dig +short redis-app-2.redis-service.default.svc.cluster.local` cluster nodes
+  redis-cli -p 6379 -h `dig +short redis-app-2.redis-service.default.svc.cluster.local` cluster nodes
 ```
 
 ### Clean up,

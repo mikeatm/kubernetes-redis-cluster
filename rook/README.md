@@ -24,14 +24,24 @@
 ```
   kubectl create -f rook-operator.yaml      # Edit with:  FLEXVOLUME_DIR_PATH = "what you want"
   kubectl create -f other-rbac.yaml
+```
+
+### PAUSE?
+
+```
   kubectl create -f rook-cluster.yaml
-  kubectl create -f rook-storageclass.yaml
 ```
 
 ### Ensure all pods are running:
 
 ```
   kubectl -n rook get pod
+```
+
+### Create Storage Class:
+
+```
+  kubectl create -f rook-storageclass.yaml
 ```
 
 ### Clean Up
