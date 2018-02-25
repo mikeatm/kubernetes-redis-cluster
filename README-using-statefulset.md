@@ -32,8 +32,7 @@ kubectl create -f statefulset/redis-statefulset.yaml
 ### Connect Nodes
 
 ```
-kubectl run -i --tty ubuntu --image=ubuntu \
-  --restart=Never /bin/bash
+kubectl run -i --tty ubuntu --image=ubuntu  /bin/bash
 ```
 
 ```
