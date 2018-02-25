@@ -34,4 +34,10 @@
   kubectl -n rook get pod
 ```
 
+### Clean Up
+
+```
+  kubectl delete -n rook pool replicapool
+  kubectl delete storageclass rook-block
+```
 
