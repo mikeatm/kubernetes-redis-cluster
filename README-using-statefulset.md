@@ -2,14 +2,8 @@
 
 ### Create Rook Hyperconverged Storage
 
-see inside rook folder.
+[see inside rook folder for Hyperconverged storage setup](rook/README.md)
 
-
-### Create Persistent Volumes Claims
-
-```
-kubectl create -f persistentvolumeclaims
-```
 
 ### Create Redis Cluster Configuration
 
