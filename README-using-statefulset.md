@@ -14,13 +14,13 @@ kubectl create configmap redis-conf --from-file=redis.conf
 ### Create Redis Services
 
 ```
-kubectl create -f statefulset-services/redis-headless.yaml
+kubectl create -f statefulset-services-redis/redis-headless.yaml
 ```
 
 ### Create Redis Statefulset
 
 ```
-kubectl create -f statefulset/redis-statefulset.yaml
+kubectl create -f statefulset-redis/redis-statefulset.yaml
 ```
 
 ### Connect Nodes
@@ -79,8 +79,8 @@ To check cluster nodes
 
 ```
   kubectl delete -f persistentvolumeclaims
-  kubectl delete -f statefulset-services/redis-headless.yaml
-  kubectl delete -f statefulset/redis-statefulset.yaml
+  kubectl delete -f statefulset-services-redis/redis-headless.yaml
+  kubectl delete -f statefulset-redis/redis-statefulset.yaml
 ```
 
 ### Contribs
