@@ -23,10 +23,21 @@
 
 ```
   kubectl create -f rook-operator.yaml      # Edit with:  FLEXVOLUME_DIR_PATH = "what you want"
+```
+
+### Ensure rook-operator  and rook-agent pods  are running
+
+```
+  kubectl -n rook-system get pod
+```
+
+### Setup RBAC
+
+```
   kubectl create -f other-rbac.yaml
 ```
 
-### PAUSE?
+### Setup the Rook Cluster
 
 ```
   kubectl create -f rook-cluster.yaml
